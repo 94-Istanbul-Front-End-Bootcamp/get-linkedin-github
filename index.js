@@ -1,24 +1,27 @@
-//get user's name 
-var entermyName = prompt("Enter your name");
-myName = document.querySelector("#myName");
-myName.innerHTML = entermyName;
+function myFunction () {
+    // nameSurname html dosyasından çekmek 
+    var nameSurname = document.querySelector("#nameSurname");
+    let NameSurname = "Betül ALBAYRAK";
+     nameSurname.innerHTML = NameSurname;
 
-// get time 
-function startTime() {
-    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    var d = new Date();
-    var dayName = days[d.getDay()];
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    var myClock = document.querySelector("#myClock");
-    myClock.innerHTML =   h + ":" + m + ":" + s + " " + dayName;
-    var t = setTimeout(startTime, 1000);
+    // age html dosyasından çekmek 
+    var age = document.querySelector("#age");
+    let Age = 22;
+    age.innerHTML = Age;
+
+    var hideBtn = document.getElementById("btn-name-age");
+    hideBtn.style.display = 'none';
 }
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-  return i;
-}
+
+
+
+
+// linkedinUrl oluşturma
+var linkedinUrl = document.getElementById("linkedinUrl");
+linkedinUrl.href = "https://www.linkedin.com/in/bet%C3%BCl-albayrak-61725a185/";
+linkedinUrl = linkedinUrl.href.innerHTML;
+
+//githubUrl oluşturma
+var githubUrl = document.getElementById("githubUrl");
+githubUrl.href = "https://github.com/BetulAlbayrak1999";
+githubUrl = githubUrl.href.innerHTML;
